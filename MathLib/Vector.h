@@ -1,0 +1,73 @@
+#pragma once
+
+#ifndef DLLEXPORT
+#define DLLEXPORT __declspec(dllexport)
+#endif // !DLLEXPORT
+
+
+// ==========================
+// Define
+// ==========================
+// => NOT RECOMMENDED
+// #define _VEC_2d_SET(v, x, y)    (v.x = x; v.y = y)
+// #define _VEC_3d_SET(v, x, y, z)    (v.x = x; v.y = y, v.z =z)
+#define TRUE 1
+
+#define FALSE 0
+
+#define BOOL unsigned char
+
+// ==========================
+// Structure
+// ==========================
+typedef struct _T_2D_Vector
+{
+    double x;
+    double y;
+}T_2D_Vector;
+
+typedef struct _T_3D_Vector
+{
+    double x;
+    double y;
+    double z;
+}T_3D_Vector;
+
+// ==========================
+// Global Variable
+// ==========================
+
+
+// ==========================
+// Global Functions
+// ==========================
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+    // Set Vector
+DLLEXPORT void vec_2d_set(T_2D_Vector& tVec, double x, double y);
+DLLEXPORT void vec_3d_set(T_3D_Vector& tVec, double x, double y, double z);
+
+    // Normalize
+DLLEXPORT BOOL vec_2d_norm(T_2D_Vector& tVec);
+DLLEXPORT BOOL vec_3d_norm(T_3D_Vector& tVec);
+
+    // Size
+DLLEXPORT double vec_2d_size(T_2D_Vector& tVec);
+DLLEXPORT double vec_3d_size(T_3D_Vector& tVec);
+
+    // Dot Product
+DLLEXPORT double vec_2d_dot(T_2D_Vector& tVec1, T_2D_Vector& tVec2);
+DLLEXPORT double vec_3d_dot(T_3D_Vector& tVec1, T_3D_Vector& tVec2);
+
+    // Cross Product
+    // input : 
+    // output : 
+DLLEXPORT void vec_2d_cross(T_2D_Vector& tVec1, T_2D_Vector& tVec2, T_2D_Vector* tpResult);
+DLLEXPORT void vec_3d_cross(T_3D_Vector& tVec1, T_3D_Vector& tVec2, T_3D_Vector* tpResult);
+
+#ifdef __cplusplus
+}
+#endif

@@ -1,0 +1,17 @@
+main.exe
+.vs/slnx.sqlite
+.vs/ComPro/v16/.suo
+.vs/ComPro/v16/Browse.VC.db
+MathLib/.vs/
+MathLib/Debug/
+MathLib/MathLib/Debug/
+MathLibApp/.vs/
+MathLibApp/Debug/
+MathLibApp/MathLibApp/Debug/
+Vector/CMakeFiles
+Vector/Vector.exe
+Vector/Makefile
+Vector/out/build/x64-Debug/VSInheritEnvironments.txt
+Vector/CMakeCache.txt
+Vector/cmake_install.cmake
+

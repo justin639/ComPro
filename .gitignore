@@ -14,4 +14,4 @@ Vector/Makefile
 Vector/out/build/x64-Debug/VSInheritEnvironments.txt
 Vector/CMakeCache.txt
 Vector/cmake_install.cmake
-
+Vector/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json

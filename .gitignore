@@ -2,10 +2,8 @@ main.exe
 .vs/slnx.sqlite
 .vs/ComPro/v16/.suo
 .vs/ComPro/v16/Browse.VC.db
-MathLib/.vs/
 MathLib/Debug/
 MathLib/MathLib/Debug/
-MathLibApp/.vs/
 MathLibApp/Debug/
 MathLibApp/MathLibApp/Debug/
 Vector/CMakeFiles
@@ -15,3 +13,5 @@ Vector/out/build/x64-Debug/VSInheritEnvironments.txt
 Vector/CMakeCache.txt
 Vector/cmake_install.cmake
 Vector/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json
+MathLib/.vs/MathLib/
+MathLibApp/.vs/MathLibApp/

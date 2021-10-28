@@ -1,15 +1,31 @@
 ﻿#include <iostream>
-#include "Vector.h"
 #include "Matrix.h"
-#include "Assignment1.h"
+
+void printMat(T3DMatrix &tMat){
+    for(int i=0; i<4; i++){
+        printf(" ");
+        for(int j=0; j<4; j++){
+            printf(" %lf", tMat.m[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+void print_3D_Vec(T3DVector &tVect){
+    printf("Vect (x: %lf, y: %lf, z: %lf)\n", tVect.x,tVect.y,tVect.z);
+}
+
+void print_2D_Vec(T2DVector &tVect){
+    printf("Vect (x: %lf, y: %lf)\n", tVect.x,tVect.y);
+}
 
 int main()
 {
-    T_3D_Vector tVec1, tVec2;
+    T3DVector tVec1, tVec2;
     T3DMatrix tIMat;
     int DISCRI;
     double QuadEquation[3] ={0.0,0.0,0.0};
-    int Mode = 0;
+    int Mode = 0; // -1: Shutdown | 1: Quadratic | 2: Trigonometric | 3: Vector | 4 : Matrix
     int FucntionNum;
     double tri_value;
     double result_Disc = 0;
@@ -18,23 +34,23 @@ int main()
 
     vec_3d_set(tVec1, 1.0, 1.0, 1.0);
     vec_3d_set(tVec2, -1.0, -1.0, 1.0);
-
     vec_3d_norm(tVec1);
+    mat_Ident(tIMat);
 
-    mat_i_get(tIMat);
-
-    printf("Vect1( %lf, %lf, %lf )\n", tVec1.x, tVec1.y, tVec1.z);
-    printf("Matrix %f\n", tIMat._11);
-    printf("%d\n", TRUE);
-    printf("About the path need to look where the lib file is.\n");
-    
+    print_3D_Vec(tVec1);
+    printMat(tIMat);
+    printf("TRUE: %d\n", TRUE);
     
     // Program Start
     printf(" - Welcome Now beginning Assingment...\n");
 
     while( Mode != -1){
         // Select Mode
-        printf("    Mode 1 : Quadratic Equation\n    Mode 2 : Trigonometric Functions\n    Mode -1 : Shut Down...\n");
+        printf("    Mode 1 : Quadratic Equation\n");
+        printf("    Mode 2 : Trigonometric Functions\n");
+        printf("    Mode 3 : Vector Fuctions\n");
+        printf("    Mode 4 : Matrix Fuctions\n");
+        printf("    Mode -1 : Shut Down...\n");
         printf(" - Select Your Mode: ");scanf_s("%d", &Mode);
 
         // Mode 1 : Quadratic Equation
@@ -186,7 +202,25 @@ int main()
             printf("Result: %lf\n", tri_result);
             printf("===================== Result End =========================\n\n");
         } // End Mode 2
+        // Mode 3 : Vector(2D & 3D) Functions
+        else if(Mode == 3){
+            int demension = 0;
+            printf("Select Demetion(2/3): ");
+            scanf_s("%d", &demension);
+            if(demension == 2){
+                printf("2D\n");
+            }
+            else if(demension == 3){
+                printf("3D\n");
+            }
+            else{
+                printf("Wrong Demention.\n");
+            }
+        }
+        // Mode 4 : Matrix(4x4) Functions
+        else if(Mode == 4){
 
+        }
         // Shut Down
         else if(Mode == -1){
             printf("------- Now Shut Down...\n");

@@ -1,4 +1,5 @@
 #pragma once
+#include "Common.h"
 
 #ifndef DLLEXPORT
 #define DLLEXPORT __declspec(dllexport)
@@ -8,7 +9,6 @@
 
 // Define End ============================================
 
-#define PI 3.14159265
 #define NOROOT 0
 #define DOUBLEROOT 1
 #define DIFFERENTROOT 2

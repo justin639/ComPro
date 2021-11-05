@@ -10,12 +10,12 @@
 
 ## MFC Components
  - SlideCtrl 
-    [--------|----------]
-    [0      100      255]
+   - [--------|----------]
+   - [0      100      255]
  - ProgressBar
-    [=========|50%      ]
+   - [=========|50%      ]
  - GridCtrl
-    Not supported, but can find open-sources
+   - Not supported, but can find open-sources
 
 ## C++
 ```C++

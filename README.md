@@ -1,4 +1,4 @@
-# Repository for my Computer Programming Class 2021.9.17
+# Repository for my Computer Programming Class 2021.11.05
 --Using vscode and vs(mainly for dll development)
 
 ## Use open-source from :
@@ -10,10 +10,9 @@
 
 ## MFC Components
  - SlideCtrl 
-   - [--------|----------]
-   - [0------100------255]
+    - 
  - ProgressBar
-   - [=========|50%---------]
+    - 
  - GridCtrl
    - Not supported, but can find open-sources
 
